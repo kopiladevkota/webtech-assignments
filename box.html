@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide</title>
+    <style>
+        #box{
+            height: 400px;
+            width: 400px;
+            background-color:aqua;
+        }
+    </style>
+    <script>
+        // function hide(){
+        //     // alert("hide is clicked");
+        //     document.getElementById("box").style.display = "none";
+        // }
+
+        // function show(){
+        //     // alert("show is clicked");
+        //     document.getElementById("box").style.display = "block";
+        // }
+        
+        // function clicking(){
+        //     if(document.getElementById("box").style.display == "none")
+        //     {
+        //        document.getElementById("box").style.display = "block" ;
+        //     }
+        //     else{
+        //         document.getElementById("box").style.display = "none" ;  
+        //     }
+        // }
+
+        function show_hide() {
+            var box = document.getElementById("box");
+            var button = document.getElementById("click");
+
+            if (document.getElementById("box").style.display == "none") {
+                document.getElementById("box").style.display = "block";
+                button.textContent = "Hide";
+            } else {
+                document.getElementById("box").style.display = "none";
+                button.textContent = "Show";
+            }
+        }
+         
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <!-- <button id="Show" onclick="show()">Show</button>
+    <button id="Hide" onclick="hide()">Hide</button> -->
+    <button id="click" onclick="show_hide()">Show/Hide</button>
+</body>
+</html>
