@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide</title>
+    <style>
+        #box{
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        function show_hide() {
+            var box = document.getElementById("box");
+            var button = document.getElementById("click");
+
+            if (box.style.display === "none") {
+                box.style.display = "block";
+                button.textContent = "Hide";
+            } else {
+                box.style.display = "none";
+                button.textContent = "Show";
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById("click").textContent = "Hide"; // Set initial button text
+        };
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="click" onclick="show_hide()">Show/Hide</button>
+</body>
+</html>
