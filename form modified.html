@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="stylemodification.css">
+</head>
+<body>
+    <form action="/submit_registration" method="POST" class="registration-form">
+        <h1>User Registration</h1>
+        <div class="form-element">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" required/>
+        </div>
+        <div class="form-element">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" required/>
+        </div>
+        <div class="form-element">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required/> 
+        </div>
+        <div class="form-element">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div class="form-element">
+            <label>Gender</label>
+            <div class="gender-options">
+                <input type="radio" name="gender" value="Male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="Female" id="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value="Other" id="other">
+                <label for="other">Other</label>
+            </div>
+        </div>
+        <div class="form-element">
+            <label>Education</label>
+            <div class="education-options">
+                <input type="checkbox" name="education[]" value="SEE" id="see">
+                <label for="see">SEE</label>
+                <input type="checkbox" name="education[]" value="Plus2" id="plus2">
+                <label for="plus2">Plus2</label>
+                <input type="checkbox" name="education[]" value="Undergraduate" id="undergraduate">
+                <label for="undergraduate">Undergraduate</label>
+                <input type="checkbox" name="education[]" value="Postgraduate" id="postgraduate">
+                <label for="postgraduate">Postgraduate</label>
+            </div>
+        </div>
+        <div class="form-element"> 
+            <label for="zone">Zone</label>
+            <select name="zone" id="zone">
+                <option value="Bagmati">Bagmati Province</option>
+                <option value="Gandaki">Gandaki Province</option>
+            </select>
+        </div>
+        <div class="form-element">
+            <input type="submit" value="Register" name="submit_button" id="submit_button">
+        </div>
+    </form>
+</body>
+</html>
