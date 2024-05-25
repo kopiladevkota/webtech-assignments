@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Over</title>
+    <style>
+        .box {
+            background-color: red;
+            padding: 15%;
+            margin: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box');
+        box.addEventListener('mouseover', function(event) {
+            box.style.backgroundColor = 'green';
+        });
+        box.addEventListener('mouseout', function(event) {
+            box.style.backgroundColor = 'yellow';
+        });
+    </script>
+</body>
+</html>
