@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+    
+    .container {
+        display: flex;
+        height: 90vh;
+    }
+    
+    .left, .center, .right {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .left {
+        background-color: rgb(56, 51, 78);
+        width: 20%;
+        color: beige;
+    }
+    
+    .center {
+        background-color: rgb(53, 1, 13);
+        width: 60%;
+        color: beige;
+    }
+    
+    .right {
+        background-color: rgb(1, 55, 1);
+        width: 20%;
+        color: beige;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="left">This frame is created to write contents of pages.It covers 20% of the page.</div>
+        <div class="center">This frame covers the body of page. It covers 60% of the page.</div>
+        <div class="right">This frame depicts the highlights.It covers the remaining portion of the page.</div>
+    </div>
+</body>
+</html>
