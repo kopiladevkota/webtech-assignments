@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential Animation Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        
+        #animateDiv {
+            width: 100px;
+            height: 100px;
+            background-color: #0378c5;
+            opacity: 1;
+        }
+        #animateBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+           
+            cursor: pointer;
+        }
+        #animateBtn:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="animateDiv"></div>
+    <button id="animateBtn">Animate</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#animateBtn').click(function() {
+                // Animate width
+                $('#animateDiv').animate({ width: '300px' }, 1000)
+                // Animate height after width animation completes
+                .animate({ height: '300px' }, 1000)
+                // Animate opacity after height animation completes
+                .animate({ opacity: 0.5 }, 1000);
+            });
+        });
+    </script>
+
+</body>
+</html>
